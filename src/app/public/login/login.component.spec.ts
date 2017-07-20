@@ -22,4 +22,6 @@ describe('LoginComponent', () => {
   it('should be created', () => {
     expect(component).toBeTruthy();
   });
+    it('true is true', () => expect(true).toBe(true));
+
 });

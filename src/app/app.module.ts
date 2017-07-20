@@ -3,13 +3,12 @@ import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import {HttpModule} from '@angular/http';
-import {ApiService} from './api.service';
 
 import { SecureComponent } from './layout/secure/secure.component';
 import { LoginComponent } from './public/login/login.component';
 import { HomeComponent } from './secure/home/home.component';
 import {PublicComponent} from './layout/public/public.component';
-import {AuthGuard} from '../common/auth.guard';
+import {AuthGuard} from './common/auth.guard';
 import {FormsModule} from '@angular/forms';
 import {AppRoutingModule} from './app-routing.module';
 
@@ -27,7 +26,7 @@ import {AppRoutingModule} from './app-routing.module';
         HttpModule,
         AppRoutingModule
     ],
-    providers: [ApiService, AuthGuard],
+    providers: [AuthGuard],
     bootstrap: [AppComponent]
 })
 export class AppModule {

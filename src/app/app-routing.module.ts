@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AuthGuard } from './../common/auth.guard';
+import { AuthGuard } from './common/auth.guard';
 import { SecureComponent, SECURE_ROUTES } from './layout/secure';
 import { PublicComponent, PUBLIC_ROUTES } from './layout/public';
 /**
