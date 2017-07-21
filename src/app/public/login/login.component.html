@@ -1,11 +1,12 @@
 <div class="wrapper">
-    <form class="form-signin">
+    <form class="form-signin" [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)">
         <h2 class="form-signin-heading">Please login</h2>
-        <input class="form-control" name="username" placeholder="Email Address" required="" autofocus=""/>
-        <input type="password" class="form-control" name="password" placeholder="Password" required=""/>
-        <label class="checkbox">
-            <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
-        </label>
-        <button class="btn btn-lg btn-primary btn-block">Login</button>
+        <input class="form-control" placeholder="Email Address" formControlName="username"/>
+        <span *ngIf="formErrors.username" class="alert alert-danger">{{ formErrors.username }}</span>
+
+        <input type="password" class="form-control" name="password" placeholder="Password" required=""
+               formControlName="password"/>
+        <span *ngIf="formErrors.password" class="alert alert-danger">{{ formErrors.password }}</span>
+        <button class="btn btn-lg btn-primary btn-block" [disabled]="!myForm.valid">Login</button>
     </form>
 </div>

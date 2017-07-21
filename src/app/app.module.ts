@@ -9,7 +9,7 @@ import { LoginComponent } from './public/login/login.component';
 import { HomeComponent } from './secure/home/home.component';
 import {PublicComponent} from './layout/public/public.component';
 import {AuthGuard} from './common/auth.guard';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {AppRoutingModule} from './app-routing.module';
 
 @NgModule({
@@ -23,6 +23,7 @@ import {AppRoutingModule} from './app-routing.module';
     imports: [
         BrowserModule,
         FormsModule,
+        ReactiveFormsModule,
         HttpModule,
         AppRoutingModule
     ],
